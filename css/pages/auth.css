@@ -1,0 +1,27 @@
+/* ========================================
+   AUTH VIEW
+   ======================================== */
+#auth-view {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--bg-body); z-index: 5000;
+    display: none; flex-direction: column; overflow-y: auto; padding: 40px 20px;
+}
+#auth-view.active { display: flex; }
+.auth-container { max-width: 400px; margin: auto; width: 100%; }
+.auth-title { font-size: 28px; font-weight: 800; text-align: center; color: var(--text-dark); margin-bottom: 8px;}
+.auth-subtitle { font-size: 14px; color: var(--text-gray); text-align: center; margin-bottom: 30px;}
+.auth-card { background: var(--bg-card); border-radius: var(--radius-card); padding: 24px 20px; box-shadow: var(--shadow); }
+
+.auth-tabs { display: flex; gap: 10px; margin-bottom: 24px; background: #f3f4f6; border-radius: var(--radius-sm); padding: 4px; }
+.auth-tab { flex: 1; padding: 12px; text-align: center; font-size: 14px; font-weight: 700; color: var(--text-gray); border: none; background: none; border-radius: 10px; cursor: pointer; transition: var(--transition); }
+.auth-tab.active { background: #fff; color: var(--text-dark); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+
+.auth-form { display: none; }
+.auth-form.active { display: block; animation: fadeUp 0.4s ease forwards; }
+
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--text-gray); margin-bottom: 6px; }
+.form-group input { width: 100%; padding: 14px 16px; background: #f9fafb; border: 1px solid var(--border-color); border-radius: var(--radius-sm); color: var(--text-dark); font-size: 14px; outline: none; }
+.form-group input:focus { border-color: var(--primary); background: #fff; }
+.auth-checkbox-row { display: flex; align-items: center; gap: 10px; margin: 10px 0 20px; font-size: 12px; color: var(--text-gray); }
+.btn-auth { width: 100%; padding: 16px; background: var(--primary); border: none; border-radius: var(--radius-sm); color: #fff; font-size: 16px; font-weight: 700; cursor: pointer; }

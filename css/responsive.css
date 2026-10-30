@@ -1,0 +1,7 @@
+/* ========================================
+   RESPONSIVE (original single media query)
+   ======================================== */
+@media (min-width: 600px) {
+    body { padding: 0 32px 80px 32px; }
+    .category-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+}

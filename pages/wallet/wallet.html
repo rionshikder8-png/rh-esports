@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>RH E-SPORTS — My Wallet</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui/material-ui.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components/loader.css">
+    <link rel="stylesheet" href="../../css/components/bottom-nav.css">
+    <link rel="stylesheet" href="../../css/pages/wallet.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body data-page="wallet" data-base="../../" class="sub-page">
+
+    <div data-include="loader"></div>
+
+    <main id="main-content" class="show">
+        <section id="wallet-view" class="app-section active">
+            <button class="back-nav" onclick="window.showTab('profile')">
+                <i class="fa-solid fa-arrow-left"></i> My Wallet
+            </button>
+
+            <div class="wallet-container">
+                <div class="wallet-gradient-card">
+                    <div class="wg-label">Available Balance</div>
+                    <div class="wg-balance">৳ <span id="wallet-balance-display">0.00</span></div>
+                </div>
+
+                <div class="wallet-stats">
+                    <div class="wallet-stat">
+                        <div class="ws-label">DEPOSITED</div>
+                        <div class="ws-amount">৳ <span id="deposit-available-wallet">0</span></div>
+                    </div>
+                    <div class="wallet-stat">
+                        <div class="ws-label">WINNING</div>
+                        <div class="ws-amount">৳ <span id="withdraw-available-wallet">0</span></div>
+                    </div>
+                </div>
+
+                <div class="wallet-actions">
+                    <button class="wa-btn add" onclick="window.navigateSub('add-money')">+ Add Money</button>
+                    <button class="wa-btn withdraw" onclick="window.navigateSub('withdraw')">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../../js/pages/wallet.js"></script>
+</body>
+</html>

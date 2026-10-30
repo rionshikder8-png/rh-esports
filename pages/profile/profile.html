@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>RH E-SPORTS — Profile</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui/material-ui.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components/loader.css">
+    <link rel="stylesheet" href="../../css/components/header.css">
+    <link rel="stylesheet" href="../../css/components/bottom-nav.css">
+    <link rel="stylesheet" href="../../css/pages/profile.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body data-page="profile" data-base="../../">
+
+    <div data-include="loader"></div>
+
+    <main id="main-content" class="show">
+
+        <div data-include="header"></div>
+
+        <!-- PROFILE VIEW -->
+        <section id="tab-profile-view" class="app-section active">
+            <div class="profile-header-bg">
+                <div class="profile-avatar-box">
+                    <img id="profile-avatar" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+                </div>
+                <div class="profile-name" id="profile-name">Guest User</div>
+                <div class="profile-email" id="profile-email">Please login to continue</div>
+            </div>
+
+            <div class="profile-quick-actions">
+                <button class="p-qa-btn" onclick="window.navigateSub('add-money')"><i class="fa-solid fa-arrow-down"></i> Deposit</button>
+                <button class="p-qa-btn" onclick="window.navigateSub('withdraw')"><i class="fa-solid fa-arrow-up"></i> Withdraw</button>
+                <button class="p-qa-btn" onclick="window.navigateSub('refer')"><i class="fa-solid fa-gift"></i> Gift</button>
+                <button class="p-qa-btn" onclick="window.navigateSub('history')"><i class="fa-solid fa-clock-rotate-left"></i> History</button>
+            </div>
+
+            <div class="menu-list">
+                <button class="menu-item" onclick="window.navigateSub('edit-profile')">
+                    <div class="icon-wrap"><i class="fa-solid fa-pen"></i></div>
+                    <span class="menu-text">Edit Profile</span>
+                    <i class="fa-solid fa-chevron-right chevron"></i>
+                </button>
+                <button class="menu-item" onclick="window.navigateSub('wallet')">
+                    <div class="icon-wrap"><i class="fa-solid fa-wallet"></i></div>
+                    <span class="menu-text">My Wallet</span>
+                    <i class="fa-solid fa-chevron-right chevron"></i>
+                </button>
+                <button class="menu-item" onclick="window.navigateSub('refer')">
+                    <div class="icon-wrap"><i class="fa-solid fa-share-nodes"></i></div>
+                    <span class="menu-text">Refer &amp; Earn</span>
+                    <i class="fa-solid fa-chevron-right chevron"></i>
+                </button>
+                <button class="menu-item" onclick="window.openSupport()">
+                    <div class="icon-wrap"><i class="fa-solid fa-headset"></i></div>
+                    <span class="menu-text">Supports</span>
+                    <i class="fa-solid fa-chevron-right chevron"></i>
+                </button>
+                <button class="menu-item" onclick="window.navigateSub('developer')">
+                    <div class="icon-wrap"><i class="fa-solid fa-code"></i></div>
+                    <span class="menu-text">Developer Profile</span>
+                    <i class="fa-solid fa-chevron-right chevron"></i>
+                </button>
+                <button class="menu-item" onclick="window.handleLogout()">
+                    <div class="icon-wrap"><i class="fa-solid fa-power-off" style="color:var(--accent-red);"></i></div>
+                    <span class="menu-text" style="color:var(--accent-red);">Logout</span>
+                </button>
+            </div>
+
+            <div data-include="footer"></div>
+        </section>
+
+        <div data-include="bottom-nav"></div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../../js/pages/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>RH E-SPORTS — Withdraw</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui/material-ui.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components/loader.css">
+    <link rel="stylesheet" href="../../css/components/bottom-nav.css">
+    <link rel="stylesheet" href="../../css/pages/wallet.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body data-page="withdraw" data-base="../../" class="sub-page">
+
+    <div data-include="loader"></div>
+
+    <main id="main-content" class="show">
+        <section id="withdraw-view" class="app-section active">
+            <button class="back-nav" onclick="window.navigateSub('wallet')">
+                <i class="fa-solid fa-arrow-left"></i> Withdraw Money
+            </button>
+
+            <div class="am-box" style="text-align:center;">
+                <div style="font-size:12px; color:var(--text-gray); font-weight:600;">Available Balance</div>
+                <div style="font-size:28px; font-weight:800; color:var(--text-dark);">BDT <span id="withdraw-available">0</span></div>
+            </div>
+
+            <div class="am-box">
+                <div class="method-grid">
+                    <div class="method-card active" data-method="bkash" onclick="window.selectWithdrawMethod(this, 'bKash')"><img src="https://i.ibb.co.com/qF1xD5xj/image-search-1769091253468.png"><span>bKash</span></div>
+                    <div class="method-card" data-method="nagad" onclick="window.selectWithdrawMethod(this, 'Nagad')"><img src="https://i.ibb.co.com/4gmdTj1f/image-search-1769091285966.png"><span>Nagad</span></div>
+                    <div class="method-card" data-method="rocket" onclick="window.selectWithdrawMethod(this, 'Rocket')"><img src="https://i.ibb.co.com/MDt4TzDf/image-search-1769091463880.png"><span>Rocket</span></div>
+                </div>
+                <input type="hidden" id="withdraw-method" value="bKash">
+                <div class="wd-input-group">
+                    <i class="fas fa-phone-alt" style="color:var(--text-gray);"></i>
+                    <input type="number" id="withdraw-number" placeholder="Mobile Number">
+                </div>
+                <div class="wd-input-group">
+                    <i class="fas fa-coins" style="color:var(--text-gray);"></i>
+                    <input type="number" id="withdraw-amount" placeholder="Amount (Min 100)">
+                </div>
+                <button class="wd-submit-btn" onclick="window.submitWithdraw()">Withdraw Money</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../../js/pages/withdraw.js"></script>
+</body>
+</html>

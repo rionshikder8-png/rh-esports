@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>RH E-SPORTS — Home</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui/material-ui.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/loader.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/bottom-nav.css">
+    <link rel="stylesheet" href="../css/pages/home.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="home" data-base="../">
+
+    <div data-include="loader"></div>
+
+    <main id="main-content" class="show">
+
+        <div data-include="header"></div>
+
+        <!-- HOME VIEW -->
+        <section id="tab-home-view" class="app-section active">
+            <div data-include="notice-bar"></div>
+
+            <div class="slider-container">
+                <div id="banner-slider-wrapper" class="slider-wrapper"></div>
+            </div>
+            <div id="slider-dots" class="slider-dots"></div>
+
+            <div class="section-header-custom">
+                <h2 class="section-title-custom">Choose Your Game</h2>
+            </div>
+
+            <div id="dynamic-category-list" class="category-grid"></div>
+        </section>
+
+        <div data-include="bottom-nav"></div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../js/pages/home.js"></script>
+</body>
+</html>

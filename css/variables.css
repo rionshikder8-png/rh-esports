@@ -1,0 +1,19 @@
+/* ========================================
+   ROOT VARIABLES — Light Theme (Screenshot Style)
+   Unchanged from the original single-file source.
+   ======================================== */
+:root {
+    --bg-body: #e3ebfa; /* হালকা নীল ব্যাকগ্রাউন্ড */
+    --bg-card: #ffffff; /* সাদা কার্ড */
+    --text-dark: #111827;
+    --text-gray: #6b7280;
+    --primary: #0f766e; /* ডার্ক টিল/গ্রিন (বাটন কালার) */
+    --primary-light: #ccfbf1;
+    --accent-purple: #7c3aed;
+    --accent-red: #ef4444;
+    --border-color: #e5e7eb;
+    --radius-card: 20px;
+    --radius-sm: 12px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+}

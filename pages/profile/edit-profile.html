@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>RH E-SPORTS — Edit Profile</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui/material-ui.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components/loader.css">
+    <link rel="stylesheet" href="../../css/components/bottom-nav.css">
+    <link rel="stylesheet" href="../../css/pages/wallet.css">
+    <link rel="stylesheet" href="../../css/pages/auth.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body data-page="edit-profile" data-base="../../" class="sub-page">
+
+    <div data-include="loader"></div>
+
+    <main id="main-content" class="show">
+        <section id="edit-profile-view" class="app-section active">
+            <button class="back-nav" onclick="window.showTab('profile')">
+                <i class="fa-solid fa-arrow-left"></i> My Profile
+            </button>
+
+            <div class="am-box">
+                <div class="form-group"><label>Username</label><input type="text" id="ep-username" class="am-input" style="margin-bottom:0;"></div>
+                <div class="form-group" style="margin-top:15px;"><label>Email (Locked)</label><input type="email" id="ep-email" class="am-input" style="margin-bottom:0;" disabled></div>
+                <div class="form-group" style="margin-top:15px;"><label>Current Password</label><input type="password" id="ep-pass-cur" class="am-input" style="margin-bottom:0;"></div>
+                <div class="form-group" style="margin-top:15px;"><label>New Password</label><input type="password" id="ep-pass-new" class="am-input" style="margin-bottom:0;"></div>
+                <button class="btn-auth" style="margin-top:15px;" onclick="window.saveProfile()">Update Profile</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../../js/pages/edit-profile.js"></script>
+</body>
+</html>

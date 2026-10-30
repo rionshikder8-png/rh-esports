@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>RH E-SPORTS — Join Match</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui/material-ui.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/loader.css">
+    <link rel="stylesheet" href="../css/components/bottom-nav.css">
+    <link rel="stylesheet" href="../css/pages/matches.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="join-match" data-base="../" class="sub-page">
+
+    <div data-include="loader"></div>
+
+    <main id="main-content" class="show">
+        <section id="join-match-view" class="app-section active" style="padding-bottom:100px;">
+            <button class="back-nav" onclick="window.closeJoinPage()">
+                <i class="fa-solid fa-arrow-left"></i> Match Joining
+            </button>
+
+            <div class="join-card">
+                <div class="join-match-title" id="join-page-title">Match Name</div>
+                <div class="join-meta" id="join-page-meta">Time</div>
+
+                <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+                    <span style="background:#fef3c7; color:#b45309; padding:4px 10px; border-radius:10px; font-size:12px; font-weight:700;">Fee: ৳<span id="join-page-fee">0</span></span>
+                    <span style="background:#fee2e2; color:#b91c1c; padding:4px 10px; border-radius:10px; font-size:12px; font-weight:700;">Kill: ৳0</span>
+                    <span style="background:#f3e8ff; color:#7c3aed; padding:4px 10px; border-radius:10px; font-size:12px; font-weight:700;">Prize: ৳0</span>
+                </div>
+
+                <div style="text-align:center; font-weight:700; margin-bottom:15px; color:var(--text-dark);" id="join-page-type">Solo</div>
+
+                <div id="join-inputs-container"></div>
+            </div>
+
+            <button class="join-btn-full" onclick="window.confirmJoin()">Join Now</button>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../js/pages/join-match.js"></script>
+</body>
+</html>

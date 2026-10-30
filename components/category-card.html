@@ -1,0 +1,16 @@
+<!-- reference-template -->
+<!-- ============================================================
+     CATEGORY CARD — REFERENCE MARKUP
+
+     This is the exact card markup the original single-file app produced.
+     The live, data-driven renderer is js/pages/home.js#createCategoryCardHTML(),
+     which is the source of truth (it fills in the ${} values from Firebase).
+     Keep the two in sync: this file documents the structure, the JS renders it.
+     ============================================================ -->
+<div class="cat-card" onclick="window.openCategory('CATEGORY_KEY')">
+    <img src="CATEGORY_IMAGE_URL" class="cat-card-img" alt="CATEGORY_NAME">
+    <div class="cat-card-info">
+        <div class="cat-card-title">CATEGORY_NAME</div>
+        <div class="cat-card-count" id="count-CATEGORY_KEY">0 Matches</div>
+    </div>
+</div>

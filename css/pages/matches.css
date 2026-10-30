@@ -1,0 +1,18 @@
+/* ========================================
+   MATCH TABS
+   ======================================== */
+.match-tabs-container { display: flex; gap: 10px; margin: 0 0 16px 0; }
+.m-tab { flex: 1; padding: 12px; text-align: center; font-size: 14px; font-weight: 600; color: var(--text-gray); border: none; background: #e2e8f0; border-radius: 20px; cursor: pointer; }
+.m-tab.active { background: #0f766e; color: #fff; }
+
+/* ========================================
+   JOIN MATCH PAGE (Screenshot 1)
+   ======================================== */
+.join-card { background: #fff; border-radius: var(--radius-card); padding: 20px; margin: 0 0 20px 0; box-shadow: var(--shadow); }
+.join-match-title { font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 4px; }
+.join-meta { font-size: 13px; color: var(--text-gray); margin-bottom: 16px; }
+.join-warning { border: 1px solid #fcd34d; background: #fef3c7; color: #b45309; font-size: 13px; font-weight: 600; text-align: center; padding: 12px; border-radius: 12px; margin-bottom: 16px; }
+.join-badge { background: #f3e8ff; color: #7c3aed; padding: 6px 24px; border-radius: 20px; font-weight: 700; font-size: 14px; display: inline-block; }
+.join-badge-container { text-align: center; margin-bottom: 16px; }
+.join-input { width: 100%; padding: 14px 16px; background: #f9fafb; border: 1px solid var(--border-color); border-radius: 12px; color: var(--text-dark); font-size: 14px; outline: none; margin-bottom: 12px; }
+.join-btn-full { position: fixed; bottom: 20px; left: 5%; width: 90%; padding: 16px; background: #0f766e; color: #fff; border: none; border-radius: 16px; font-size: 18px; font-weight: 800; cursor: pointer; z-index: 100; }

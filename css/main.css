@@ -1,0 +1,45 @@
+/* ========================================
+   RESET & BASE
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Outfit', 'Hind Siliguri', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    min-height: 100vh;
+    padding: 0 16px 80px 16px;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+#main-content { display: none; }
+#main-content.show { display: block; }
+.app-section { display: none; animation: fadeUp 0.4s ease forwards; }
+.app-section.active { display: block; }
+
+/* ========================================
+   HISTORY / EMPTY MESSAGE (shared)
+   ======================================== */
+.empty-msg { text-align: center; padding: 40px 20px; color: var(--text-gray); font-weight: 500; font-size: 14px; }
+
+/* ========================================
+   FOOTER CREDIT
+   ======================================== */
+.footer-credit { text-align: center; padding: 30px 0 10px 0; opacity: 0.7; }
+.footer-credit .dev-name { font-size: 13px; font-weight: 600; color: var(--text-dark); }
+
+/* ========================================
+   SWEETALERT2 OVERRIDES
+   ======================================== */
+.swal2-popup { background: #fff !important; border-radius: 20px !important; color: var(--text-dark) !important; font-family: 'Outfit', sans-serif !important;}
+.swal2-title, .swal2-html-container { color: var(--text-dark) !important; }
+.swal2-confirm { background: #0f766e !important; border-radius: 12px !important; font-weight: 700 !important; }
+.swal2-cancel { background: #f3f4f6 !important; color: var(--text-dark) !important; border-radius: 12px !important; font-weight: 600 !important; }

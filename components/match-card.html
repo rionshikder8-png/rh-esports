@@ -1,0 +1,37 @@
+<!-- reference-template -->
+<!-- ============================================================
+     MATCH CARD — REFERENCE MARKUP
+
+     This is the exact card markup the original single-file app produced.
+     The live, data-driven renderer is js/components/match-card.js#createMatchCardHTML(),
+     which is the source of truth (it fills in the ${} values from Firebase).
+     Keep the two in sync: this file documents the structure, the JS renders it.
+     ============================================================ -->
+<div class="match-card" onclick="window.openMatchDetails('MATCH_KEY')">
+    <div class="banner-box">
+        <img src="CATEGORY_IMAGE_URL" alt="Match Banner">
+        <div class="banner-overlay"></div>
+        <div class="badge-map">MAP_NAME</div>
+        <div class="badge-id">ID: LAST4</div>
+        <div class="timer-badge match-countdown" data-time="TIMESTAMP"><i class="far fa-clock"></i> <span class="timer-display">Loading...</span></div>
+        <h3 class="banner-title">MATCH_TITLE</h3>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-item"><i class="fa-solid fa-sack-dollar"></i><span class="stat-lbl">Prize Pool</span><span class="stat-val">৳PRIZE_POOL</span></div>
+        <div class="stat-item"><i class="fa-solid fa-skull"></i><span class="stat-lbl">Per Kill</span><span class="stat-val">৳PER_KILL</span></div>
+        <div class="stat-item"><i class="fa-solid fa-ticket"></i><span class="stat-lbl">Entry</span><span class="stat-val">৳ENTRY</span></div>
+        <div class="stat-item"><i class="fa-solid fa-users"></i><span class="stat-lbl">Type</span><span class="stat-val">TYPE</span></div>
+    </div>
+
+    <div class="action-container">
+        <div class="spots-left">Only SPOTS_LEFT Spots Left</div>
+        <div class="bar-bg" style="width:100%"><div class="bar-fill" style="width:PERCENT%"></div></div>
+        <button class="btn-join-main">Join Now</button>
+    </div>
+
+    <div class="bottom-grid">
+        <div class="btn-bottom"><i class="fa-solid fa-users"></i> Participants</div>
+        <div class="btn-bottom" onclick="event.stopPropagation(); window.checkRoom('MATCH_KEY')"><i class="fas fa-key"></i> Id & Password</div>
+    </div>
+</div>

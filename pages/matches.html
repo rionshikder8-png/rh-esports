@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>RH E-SPORTS — Matches</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui/material-ui.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/loader.css">
+    <link rel="stylesheet" href="../css/components/bottom-nav.css">
+    <link rel="stylesheet" href="../css/components/cards.css">
+    <link rel="stylesheet" href="../css/components/modal.css">
+    <link rel="stylesheet" href="../css/pages/matches.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="matches" data-base="../" class="sub-page">
+
+    <div data-include="loader"></div>
+
+    <main id="main-content" class="show">
+        <section id="matches-view" class="app-section active">
+            <button class="back-nav" onclick="window.showTab('home')">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+
+            <div class="match-tabs-container">
+                <button class="m-tab active" id="mt-Upcoming" onclick="window.filterMatchTab('Upcoming')">Matches</button>
+                <button class="m-tab" id="mt-Finished" onclick="window.filterMatchTab('Finished')">Result</button>
+            </div>
+
+            <div id="matches-container"></div>
+        </section>
+    </main>
+
+    <div data-include="modal"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../js/pages/matches.js"></script>
+</body>
+</html>
