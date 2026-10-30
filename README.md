@@ -8,6 +8,22 @@ database paths, same business logic. The only change is how the code is organise
 - **No frameworks, no build step, no bundler, no npm dependencies**
 - **Firebase project:** `rh-esports-1f458` (unchanged)
 
+## Live deployment
+
+| | |
+|---|---|
+| **Live site** | https://rionshikder8-png.github.io/rh-esports/ |
+| **Repository** | https://github.com/rionshikder8-png/rh-esports |
+| **Host** | GitHub Pages (free, HTTPS enforced, public repo) |
+| **Auto-deploy** | every push to `main` republishes the site |
+
+The site is served from a sub-path (`/rh-esports/`). That works because every path in
+this project is **relative** — no root-absolute `/css/...` links anywhere. If you ever add
+one, it will break on GitHub Pages but not on localhost, which is an easy trap.
+
+The repo root contains an empty `.nojekyll` file so GitHub Pages publishes the project
+verbatim instead of running it through Jekyll. Do not delete it.
+
 ---
 
 ## 1. Read this first — two setup steps
@@ -48,7 +64,13 @@ Two things in this structure need a real HTTP origin: **ES modules** and the
 a blank page or a console error. That is a browser restriction, not a bug.
 
 Also add the host you serve from to **Firebase console → Authentication → Settings →
-Authorized domains** (e.g. `localhost`).
+Authorized domains**:
+
+- `localhost` — for local development
+- `rionshikder8-png.github.io` — **required** for the live site, otherwise Firebase
+  login fails there with `auth/unauthorized-domain`
+
+Add them as bare hostnames, no `https://` and no path.
 
 ---
 
@@ -381,11 +403,23 @@ without them was verified.
 
 ## 10. Remaining setup requirements
 
-1. Paste the real `apiKey` into `js/firebase/config.js` (section 1.1).
-2. Serve over HTTP and add the host to Firebase **Authorized domains** (section 1.2).
-3. Confirm your Realtime Database rules allow the paths listed in section 6 for signed-in
-   users, and that the `sms_inbox` reader app is still writing there.
+The site is deployed and every page, stylesheet, module and component fragment loads
+correctly over HTTPS (139 requests verified against the live URLs). What is **not** yet
+verified is Firebase sign-in on the deployed site, because it cannot work until step 1
+is done.
+
+1. **Paste the real `apiKey` into `js/firebase/config.js`**, then commit and push. Until
+   this is done, the deployed site reaches `login.html` and shows the configuration
+   message instead of signing anyone in.
+2. **Add `rionshikder8-png.github.io` to Firebase → Authentication → Settings →
+   Authorized domains.** Without this exact hostname, login fails with
+   `auth/unauthorized-domain` even after the key is correct.
+3. Confirm your Realtime Database rules allow the paths in section 6 for signed-in users,
+   and that the `sms_inbox` reader app is still writing to them.
 4. Decide whether to harden the financial flows (section 8). Recommended before real money.
+
+Steps 1 and 2 are the only things standing between the current deployment and working
+login. Neither can be done from this repository — both are Firebase console changes.
 
 ---
 
